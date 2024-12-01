@@ -8,6 +8,11 @@ if ($fp = fopen(dirname(__FILE__) . "/input.txt", "r")) {
 
         $lists[(int) $columns[0]] = (int) $columns[1];
     }
+    
+    fclose($fp);
+} else {
+    echo "Failed to read input" . PHP_EOL;
+    exit(1);
 }
 
 $keys = array_keys($lists);
